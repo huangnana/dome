@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>RunJS</title>
+        <style>
+        	.login{
+			    position:absolute;
+			    border:1px solid red;
+			}
+			.login .title{
+			    height:30px;
+			    line-height:30px;
+			    position:relative;
+			}
+			.login .title .close{
+			    position:absolute;
+			    right:10px;
+			    top:6px;
+			}
+        </style>
+    </head>
+    <body>
+        <input type="button" class="btn1" value="1"> 
+        <input type="button" class="btn2"  value="2"> 
+        <input type="button" class="btn3"  value="3"> 
+        
+    <!-- <div class="login"><div class="title">登录 <a class="close">x</a></div><div class="content">asdasdasd</div></div> -->
+   <script type="text/javascript">
+		var oBtn1 = document.getElementsByTagName("input")[0];
+		var oBtn2 = document.getElementsByTagName("input")[1];
+		oBtn1.onclick = function(){
+		        var diag = new Diag();
+		        diag.init({
+		                
+		        });
+		}
+		oBtn2.onclick = function(){
+		        var diag2 = new Diag();
+		        diag2.init({
+		            width:150,
+		            height:400,
+		            dir:'right',
+		            title:'广告'
+		        });
+		} 
+		function Diag(){
+		        this.Login = null;
+		        this.settings = {
+		            width:300,
+		            height:300,
+		            dir:'center',
+		            title:'登录'
+		        }
+		    }
+		Diag.prototype.init = function(opt){
+		    extend(this.settings,opt);
+		    this.create();
+		    this.closeLogin();
+		}
+		        
+		Diag.prototype.create = function(){
+		        this.Login = document.createElement("div");
+		        this.Login.className = "login";
+		        this.Login.innerHTML =" <div class='title'>"+this.settings.title+"<a class='close'>x</a></div>"
+		                +"<div class='content'>asdasdasd</div>";
+		        document.body.appendChild(this.Login);
+		        this.setData();
+		}
+		    
+		Diag.prototype.setData = function(){
+		    this.Login.style.width = this.settings.width + "px";
+		        this.Login.style.height = this.settings.height + "px";
+		    if(this.settings.dir=="center"){
+		            this.Login.style.left = (this.clientWidth() -this.Login.offsetWidth)/2 + "px";
+		        this.Login.style.top = (this.clientHeight() -this.Login.offsetHeight)/2 + "px";
+		    }else if(this.settings.dir=="right"){
+		            this.Login.style.left = (this.clientWidth() -this.Login.offsetWidth) + "px";
+		        this.Login.style.top = (this.clientHeight() -this.Login.offsetHeight) + "px";
+		    }
+		}
+		    
+		 Diag.prototype.clientWidth = function(){
+		      return document.documentElement.clientWidth;
+		 }
+		        
+		Diag.prototype.clientHeight = function(){
+		      return document.documentElement.clientHeight;
+		}
+		        
+		 Diag.prototype.closeLogin = function(){
+		      var oA = document.getElementsByTagName("a")[0];
+		      var me  = this;
+		      oA.onclick = function(){
+		         document.body.removeChild(me.Login);
+		      }
+		}    
+		    
+		function extend(obj1,obj2){
+		      for(var attr in obj2){
+		          obj1[attr] = obj2[attr];
+		      }
+		}
+   </script>
+    </body>
+</html>
