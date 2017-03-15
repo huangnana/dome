@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>风迷-发现新鲜视 我有我看法 </title>    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Description" content="风迷，支持上传分享，欢迎优秀的原创作者。风迷精选将每日推荐数十部优质视频，影视热评、生活创意、VR视频等，每一部视频都会让你的生活更丰富，欢迎成为风迷。" />
+    <meta name="Keywords" content="VR视频、全景视频、影音播放器、暴风TV、搞笑视频、暴走大事件、美食、风迷精选、风迷、Fengmi" />
+    <link rel="shortcut icon" href="/themes/light/video/images/favicon.ico"  /> 
+    <link rel="stylesheet" href="/themes/light/video/css/dropkick.css" > 
+    <link rel="stylesheet" href="/themes/light/video/css/fmpersonal.css" >
+    <link rel="stylesheet" href="/themes/light/video/css/fmmain.css" >
+    <link rel="stylesheet" href="/themes/light/video/css/laydate.css" >
+    <link rel="stylesheet" href="/themes/light/user/css/uploadify.css" >
+    <link rel="stylesheet" href="/themes/light/user/css/jquery.Jcrop.css" >
+    <link rel="stylesheet" href="/themes/light/video/css/fmstyle_b.css" media="screen and (min-width: 1440px)">  
+    <link rel="stylesheet" href="/themes/light/user/css/pop.css" >
+    <!--[if IE]> 
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script type="text/javascript" src="/themes/light/video/js/PIE.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="/themes/light/video/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/themes/light/video/js/XCheck.js"></script>  
+    <script type="text/javascript" src="/themes/light/user/js/cropbox.js"></script>
+    <script type="text/javascript" src="/themes/light/user/js/jquery.dropkick-min.js"></script>
+    <script type="text/javascript" src="/themes/light/video/js/uploadsdk.min.js"></script>
+    <script type="text/javascript" src="/themes/light/video/js/jquery.uploadify.js"></script>
+	<script type="text/javascript" src="/themes/light/user/js/jquery.Jcrop.js"></script>
+	<script type="text/javascript" src="/themes/light/video/js/hero.js"></script>
+	<script type="text/javascript" src="/themes/light/video/js/jquery.als-1.7.min.js"></script>
+</head>
+<body> <script type="text/javascript" src="/themes/light/video/js/login.js"></script>
+    <div id="actor">
+  	<nav> 
+    <div class="main-n main clearfix">
+        <a href="/"><img src="/themes/light/video/images/logob.png" class="logoimg"></a>
+        <div class="two-couple">
+            <a href="/" class="video-index" ><em>首页</em></a><a href="/user/index" class="caimashroom"><em>下载</em></a><!--<a href="/video/about" class="ab-riverrun" style="margin-left:30px;"><em>关于</em></a>-->
+        </div>
+        <div class="indexSearch nav-indexSearch"> <!--style="display:none;"-->
+             <input id="key" name="keyword" class="searchAll" type="text" placeholder="请输入片单名称或用户名" value="">
+             <span id="videoSearch" class="videoSearch"></span>
+        </div>
+        <div class="tips-ling "><!--有提醒时添加小黄点 tips-ling 添加current-->
+        		        	<div class="ling-list">
+	        	<span class="indexarrow"></span>
+	        			                	<a href="/video/play/vid/304207" class="notice"><div class="clearfix">
+	                					                    <img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-10/2/2ed3b08c70215d25961105e203217944.jpg!180x180">	
+			                	                	<p><em>盐猴放映厅</em>制作了片单<em>《夜色人生》#风迷影院#</em></p>                		</div></a>
+	                	                	<a href="/video/play/vid/304204" class="notice"><div class="clearfix">
+	                					                    <img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-01/2/8d0ffd95bbd17a4ed9cf2361840d56df.jpg!180x180">	
+			                	                	<p><em>YU</em>制作了片单<em>5分钟看完SM的爱情《五十度黑》</em></p>                		</div></a>
+	                	                	<a href="/video/play/vid/304203" class="notice"><div class="clearfix">
+	                					                    <img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-01/2/8d0ffd95bbd17a4ed9cf2361840d56df.jpg!180x180">	
+			                	                	<p><em>YU</em>制作了片单<em>6分钟看完2016悬疑電影《秘密》</em></p>                		</div></a>
+	                	                <!--
+	               <a href="/" class="praise"><div class="clearfix"><img src="/themes/light/video/images/p-admin.png"><p>赞了你的片单。<br><em>这是一首简单的小情歌</em></p></div></a>
+	               <a href="#" class="new-creat"><div class="clearfix"><img src="/themes/light/video/images/p-admin.png"><p>新创建了一个片单。<br><em>这是一首简单的小情歌</em></p></div></a>
+	               -->
+	               <a href="/ucenter/mynotice" class="check-more">查看全部</a>
+	        	</div>
+	                </div>
+        
+        <a class="upload-quick" target="_blank"></a>
+                <div class="n-right-admin">	
+            <div class="over-admin-img">
+            	<a href="/ucenter/mysheet">
+            	                    <img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-02/6/f3aa046b9fa7b3bb00a74aad3070483d.jpeg!180x180">	
+                                </a>
+            </div>
+            <div class="over-admin-list">
+                <span class="indexarrow"></span>
+                <a href="/ucenter/mysheet" class="per-center"><div class="href-per">个人中心</div></a>
+               <a href="/ucenter/info"><div class="href-edit">个人设置</div></a>
+               <a href="#" class="real-exit"><div class="href-exit">退出账号</div></a>
+            </div>
+        </div>
+            </div>
+    <script type="text/javascript">
+		$(".tips-ling").on('click', function(event) {
+							window.open("/ucenter/mynotice");
+				     });
+	     
+	    $(".tips-ling a").on('click',function(e){
+		    e.stopPropagation();
+		})
+	     
+	     $(".upload-quick").on('click', function(event) {
+							window.open("/ucenter/addsheet");
+				     });
+	</script>
+</nav>  	<div class="fmlogin">
+    <div class="fm-login">
+       <div class="login-blue"><span></span></div>
+        <div class="login-inpress">
+            <input name="username" type="text" placeholder="请输入手机号" class="please-input">
+            <input name="password" type="password" placeholder="请输入密码" class="please-pas">
+            <div class="loginin-press">登录</div>
+        </div>
+        
+        <div class="error-tipspas" style="display: none"><span></span></div>
+        
+        <div class="enter-other" >
+            <span class="findpas">找回密码</span><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="goreg">注册账号</span>
+        </div>  
+    </div>
+    <!--注册新账号-->
+    <div class="fm-reg" >
+        <div class="reg-blue"><span></span></div>
+        <div class="reg-inpress">
+            <input name="mobile" type="text" placeholder="请输入手机号码" class="please-num" maxlength="11" >
+            <div class="please-pure">
+                <input name="code" type="text" placeholder="请输入验证码" class="please-true">
+                <div class="get-true"><input type="button"  class="getnumber" value="获取验证码"></div>
+
+            </div>  
+                
+            <div class="regin-press ">注册</div>
+        </div>
+        <div class="back-other">
+            <span class="backlogin">返回登录</span>
+        </div>
+    </div>
+    <!--找回密码第一步先手机验证-->
+    <div class="fm-regnext" >
+        <div class="reg-blue find-first"><span></span></div>
+        <div class="reg-inpress">
+            <input name="mobile" type="text" placeholder="请输入手机号码" class="please-num" maxlength="11" id="mobile" onblur="enbleBtn(this)">
+            <div class="please-pure">
+                <input name="code" type="text" placeholder="请输入验证码" class="please-true"  id="code" onblur="enbleNextBtn(this)" >
+                <div class="get-true"><input type="button" id="getcheckcode" class="getnumber" value="获取验证码"></div>
+
+            </div>  
+            <input name="type" type="hidden" id="type" value="1">    
+            <div class="regin-pressnext" id="nextBtn">下一步</div>
+        </div>
+        <div class="error-tipspas" style="display: none"><span></span></div>
+        <div class="back-other">
+            <span class="backlogin">返回登录</span>
+        </div>
+    </div>
+    <!--找回密码第二步重置密码 新用户设置密码-->
+    <div class="fm-regnextpas" >
+        <div class="reg-blue find-m-blue"><span></span></div>
+        <div class="reg-inpress">
+            <input name="newpassword" type="password" placeholder="设置新密码" class="please-num" >
+            <div class="please-pure">
+                <input name="renewpassword" type="password" placeholder="请再次确认密码" class="please-true" style="width:100%;">
+            </div>               
+            <div class="regin-pressdone">完成</div>
+        </div>
+        <div class="error-tipspas" style="display: none"><span></span></div>
+        <div class="back-other">
+            <span class="backlogin">返回登录</span>
+        </div>
+    </div>
+</div> 
+    <div class="nav-recommend">
+    	        <div class="main clearfix">
+            <ul id="example-two">
+            	<li class="current_page_item_two"><a href="/video/index" >推荐</a></li>
+            	              
+               	<li ><a href="/video/category/cid/25">VR</a></li> 
+                              
+               	<li ><a href="/video/category/cid/17">影视</a></li> 
+                              
+               	<li ><a href="/video/category/cid/10">搞笑</a></li> 
+                              
+               	<li ><a href="/video/category/cid/6">娱乐</a></li> 
+                              
+               	<li ><a href="/video/category/cid/16">次元</a></li> 
+                              
+               	<li ><a href="/video/category/cid/19">生活</a></li> 
+                              
+               	<li ><a href="/video/category/cid/26">趣玩</a></li> 
+                 
+            </ul>
+        </div>
+            </div>
+    <div style="height:36px;"></div>
+    <!-- 导航栏over -->
+
+    <div class="content-recommend">
+        <div class="main">
+            <div class="recommend-hot clearfix">
+                <div class="hot-title">
+                	<p><span>T</span>op recommended</p>
+        			<em>热门推荐</em>
+                </div>
+                                 <div class="hot-star">
+                     <!-- <img src="images/hot-star.jpg"> -->
+                    <ul>
+                    	                    	                        <li style="display:block;">
+                        	<a href="/video/play/vid/304048?cid=16" target="_blank">
+                    		                                     	<img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/5/148826388510175.jpg" alt="【三歪_空辰】City Lights">
+                                                                <span class="hott-title">【三歪_空辰】City Lights</span>
+                                <span class="hot-from">来自-Colorday<em>130播放</em></span>
+                        	</a>
+                        </li>
+                                            	                        <li >
+                        	<a href="/video/play/vid/302994?cid=19" target="_blank">
+                    		                                     	<img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/8/148945746890462.jpg" alt="《养宠七日谈》刚到家的幼犬突然腹泻怎么办">
+                                                                <span class="hott-title">《养宠七日谈》刚到家的幼犬突然腹泻怎么办</span>
+                                <span class="hot-from">来自-有宠<em>17211播放</em></span>
+                        	</a>
+                        </li>
+                                            	                        <li >
+                        	<a href="/video/play/vid/304183?cid=10" target="_blank">
+                    		                                     	<img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/1/148923147184529.jpg" alt="常远战场变身圣诞老人 打入敌军内部闹乌龙">
+                                                                <span class="hott-title">常远战场变身圣诞老人 打入敌军内部闹乌龙</span>
+                                <span class="hot-from">来自-妙蛙小司机<em>324播放</em></span>
+                        	</a>
+                        </li>
+                                            	                        <li >
+                        	<a href="/video/play/vid/298231?cid=19" target="_blank">
+                    		                                     	<img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/8/148939480869371.jpg" alt="【二更】为你，百炼钢成绕指柔">
+                                                                <span class="hott-title">【二更】为你，百炼钢成绕指柔</span>
+                                <span class="hot-from">来自-二更视频<em>144319播放</em></span>
+                        	</a>
+                        </li>
+                                            	                        <li >
+                        	<a href="/video/play/vid/304196?cid=19" target="_blank">
+                    		                                     	<img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/7/148929193764041.jpg" alt="如何制作可爱的黏土造型兔子">
+                                                                <span class="hott-title">如何制作可爱的黏土造型兔子</span>
+                                <span class="hot-from">来自-手工生活<em>678播放</em></span>
+                        	</a>
+                        </li>
+                                            	                    	                    	                    	                    </ul>
+                    <ol>
+                        <li class="current"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                                <div class="hot-littlestar clearfix">
+                    <ul>
+                    	                    	                    	                    	                    	                    	                    	                        <li>
+                            <a href="/video/play/vid/304192?cid=17" target="_blank">
+                                                                 	<img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/7/148923293767356.jpg" alt="速看2017奥斯卡最佳影片《月光男孩》">
+                                                                <span class="star-title">速看2017奥斯卡最佳影片《月光男孩》</span>
+                                <span class="star-from">来自-<em>YU</em>&nbsp;&nbsp;&nbsp;&nbsp;<em>474</em> 播放</span>
+                                <span class="star-time"><em>播放</em></span>
+                                <div class="star-gray"></div>
+                            </a>
+                        </li>
+                                             	                        <li>
+                            <a href="/video/play/vid/304047?cid=16" target="_blank">
+                                                                 	<img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/0/148826387033121.jpg" alt="【秋一】星期五的早安">
+                                                                <span class="star-title">【秋一】星期五的早安</span>
+                                <span class="star-from">来自-<em>Colorday</em>&nbsp;&nbsp;&nbsp;&nbsp;<em>749</em> 播放</span>
+                                <span class="star-time"><em>播放</em></span>
+                                <div class="star-gray"></div>
+                            </a>
+                        </li>
+                                             	                        <li>
+                            <a href="/video/play/vid/304182?cid=10" target="_blank">
+                                                                 	<img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/2/148923145237272.jpg" alt="情侣大学宿舍大秀恩爱 张子栋被虐狗粮塞嘴">
+                                                                <span class="star-title">情侣大学宿舍大秀恩爱 张子栋被虐狗粮塞嘴</span>
+                                <span class="star-from">来自-<em>妙蛙小司机</em>&nbsp;&nbsp;&nbsp;&nbsp;<em>1013</em> 播放</span>
+                                <span class="star-time"><em>播放</em></span>
+                                <div class="star-gray"></div>
+                            </a>
+                        </li>
+                                             	                        <li>
+                            <a href="/video/play/vid/304033?cid=19" target="_blank">
+                                                                 	<img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/7/148818664764712.png" alt="折一只萌萌哒的小猫吧">
+                                                                <span class="star-title">折一只萌萌哒的小猫吧</span>
+                                <span class="star-from">来自-<em>手工生活</em>&nbsp;&nbsp;&nbsp;&nbsp;<em>714</em> 播放</span>
+                                <span class="star-time"><em>播放</em></span>
+                                <div class="star-gray"></div>
+                            </a>
+                        </li>
+                                               
+                    </ul>
+                </div>
+            </div>	
+            <!-- VR -->
+                        <div class="recommend-vr als-container lista" id="">
+                <div class="vr-title">
+                	<p><span>VR</span> video</p>
+        			<em>VR全景视频</em>
+                    <span class="vr-more"><a href="/video/category/cid/25" target="_blank"></a></span>
+                </div>
+              <div>
+              <div class="model-hot">
+                <div class="box-biggg">
+                    <div class="television-box clearfix als-viewport">
+                        <ul class="als-wrapper">
+                        	                            <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303523?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484191790.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303523?cid=25" target="_blank"><span>化妆城奇妙夜</span></a></p>
+                                    <p class="list-play"><em>16813</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303522?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484192011.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303522?cid=25" target="_blank"><span>酒吧歌者</span></a></p>
+                                    <p class="list-play"><em>12553</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303521?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484191675.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303521?cid=25" target="_blank"><span>奇异博士MV</span></a></p>
+                                    <p class="list-play"><em>10238</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303520?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484202197.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303520?cid=25" target="_blank"><span>少狼：恶鬼来袭</span></a></p>
+                                    <p class="list-play"><em>8092</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303519?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484202685.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303519?cid=25" target="_blank"><span>深海下潜VR</span></a></p>
+                                    <p class="list-play"><em>25118</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303499?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483940908.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303499?cid=25" target="_blank"><span>韩国潮人劲爆街舞</span></a></p>
+                                    <p class="list-play"><em>9270</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303498?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483941954.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303498?cid=25" target="_blank"><span>加州尖叫过山车</span></a></p>
+                                    <p class="list-play"><em>21137</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303497?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483942173.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303497?cid=25" target="_blank"><span>探索未知世界奇观</span></a></p>
+                                    <p class="list-play"><em>9481</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303496?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483942818.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303496?cid=25" target="_blank"><span>CS枪战：对决</span></a></p>
+                                    <p class="list-play"><em>16866</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                
+                            </li>
+                                                     
+                        </ul>
+                    </div>
+                </div>
+                <span class="list-arrow-left als-prev"></span>
+                <span class="list-arrow-right als-next"></span>
+              </div>
+              <div class="model-hot model-new">
+                <div class="box-biggg">
+                    <div class="television-box clearfix als-viewport">
+                        <ul class="als-wrapper">
+                        	                            <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303523?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484191790.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303523?cid=25" target="_blank"><span>化妆城奇妙夜</span></a></p>
+                                    <p class="list-play"><em>16813</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303523?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484191790.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303523?cid=25" target="_blank"><span>化妆城奇妙夜</span></a></p>
+                                    <p class="list-play"><em>16813</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303522?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484192011.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303522?cid=25" target="_blank"><span>酒吧歌者</span></a></p>
+                                    <p class="list-play"><em>12553</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303522?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484192011.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303522?cid=25" target="_blank"><span>酒吧歌者</span></a></p>
+                                    <p class="list-play"><em>12553</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303521?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484191675.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303521?cid=25" target="_blank"><span>奇异博士MV</span></a></p>
+                                    <p class="list-play"><em>10238</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303521?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484191675.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303521?cid=25" target="_blank"><span>奇异博士MV</span></a></p>
+                                    <p class="list-play"><em>10238</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303520?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484202197.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303520?cid=25" target="_blank"><span>少狼：恶鬼来袭</span></a></p>
+                                    <p class="list-play"><em>8092</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303520?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484202197.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303520?cid=25" target="_blank"><span>少狼：恶鬼来袭</span></a></p>
+                                    <p class="list-play"><em>8092</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303519?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484202685.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303519?cid=25" target="_blank"><span>深海下潜VR</span></a></p>
+                                    <p class="list-play"><em>25118</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303519?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170112/1484202685.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303519?cid=25" target="_blank"><span>深海下潜VR</span></a></p>
+                                    <p class="list-play"><em>25118</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303499?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483940908.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303499?cid=25" target="_blank"><span>韩国潮人劲爆街舞</span></a></p>
+                                    <p class="list-play"><em>9270</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303499?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483940908.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303499?cid=25" target="_blank"><span>韩国潮人劲爆街舞</span></a></p>
+                                    <p class="list-play"><em>9270</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303498?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483941954.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303498?cid=25" target="_blank"><span>加州尖叫过山车</span></a></p>
+                                    <p class="list-play"><em>21137</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303498?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483941954.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303498?cid=25" target="_blank"><span>加州尖叫过山车</span></a></p>
+                                    <p class="list-play"><em>21137</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303497?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483942173.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303497?cid=25" target="_blank"><span>探索未知世界奇观</span></a></p>
+                                    <p class="list-play"><em>9481</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303497?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483942173.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303497?cid=25" target="_blank"><span>探索未知世界奇观</span></a></p>
+                                    <p class="list-play"><em>9481</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303496?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483942818.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303496?cid=25" target="_blank"><span>CS枪战：对决</span></a></p>
+                                    <p class="list-play"><em>16866</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303496?cid=25" target="_blank" class="abc">
+                                                                         	 <img src="http://img.static.mojing.cn/picture/170109/1483942818.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303496?cid=25" target="_blank"><span>CS枪战：对决</span></a></p>
+                                    <p class="list-play"><em>16866</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920086464301" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-07/5/3672fbeb27f392fa71c4de7947c60864.jpg!180x180">
+	                                                                        	<em>VR视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                     
+                        </ul>
+                    </div>
+                </div>
+                <span class="list-arrow-left als-prev"></span>
+                <span class="list-arrow-right als-next"></span>
+              </div>
+             </div>
+            </div>
+                        <!-- 影视 -->
+                        <div class="recommend-television als-container lista" id="">
+                <div class="television-title">
+                	<p><span>M</span>ovie & TV</p>
+        			<em>影视</em>
+                    <span class="television-more"><a href="/video/category/cid/17" target="_blank"></a></span>
+                </div>
+                <div class="box-biggg">
+                    <div class="television-box clearfix als-viewport">
+                        <ul class="als-wrapper">
+                        	                            <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304211?cid=17" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/5/148945946567710.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304211?cid=17" target="_blank"><span>斯嘉丽新片限制级预告《仓皇一夜》性感来袭</span></a></p>
+                                    <p class="list-play"><em>9</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920110105800" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-03/4/1047884f33b4e51fe065b3cf3b3cf151.jpg!180x180">
+	                                                                        	<em>风油精</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304209?cid=17" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/7/148938186785687.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304209?cid=17" target="_blank"><span>银河护卫队2预告合辑 超萌小格鲁特</span></a></p>
+                                    <p class="list-play"><em>11</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920110105800" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-03/4/1047884f33b4e51fe065b3cf3b3cf151.jpg!180x180">
+	                                                                        	<em>风油精</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304204?cid=17" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/1/148929459198404.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304204?cid=17" target="_blank"><span>5分钟看完SM的爱情《五十度黑》</span></a></p>
+                                    <p class="list-play"><em>520</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920081933452" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-01/2/8d0ffd95bbd17a4ed9cf2361840d56df.jpg!180x180">
+	                                                                        	<em>YU</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304203?cid=17" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/6/148929450678254.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304203?cid=17" target="_blank"><span>6分钟看完2016悬疑電影《秘密》</span></a></p>
+                                    <p class="list-play"><em>246</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920081933452" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-01/2/8d0ffd95bbd17a4ed9cf2361840d56df.jpg!180x180">
+	                                                                        	<em>YU</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304202?cid=17" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/6/148929360693147.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304202?cid=17" target="_blank"><span>4分鐘看完窮人翻身的偽CG動畫《逆轉人生》</span></a></p>
+                                    <p class="list-play"><em>134</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920081933452" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-01/2/8d0ffd95bbd17a4ed9cf2361840d56df.jpg!180x180">
+	                                                                        	<em>YU</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/302901?cid=17" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com/imgface/origin/2017-03/6/148913839612801.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/302901?cid=17" target="_blank"><span>暮狼归家--谢谢你的18年  一路走好金刚狼！</span></a></p>
+                                    <p class="list-play"><em>22552</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920107521280" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-12/1/035c83e6baba2c3ec632e5556a0803a5.jpg!180x180">
+	                                                                        	<em>风迷原创</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304194?cid=17" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/5/148923294561176.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304194?cid=17" target="_blank"><span>速看高分科幻片《人类之子》</span></a></p>
+                                    <p class="list-play"><em>241</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920081933452" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-01/2/8d0ffd95bbd17a4ed9cf2361840d56df.jpg!180x180">
+	                                                                        	<em>YU</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304193?cid=17" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/9/148923293939188.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304193?cid=17" target="_blank"><span>几分钟看完最新恐怖电影《爱宠》</span></a></p>
+                                    <p class="list-play"><em>330</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920081933452" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-01/2/8d0ffd95bbd17a4ed9cf2361840d56df.jpg!180x180">
+	                                                                        	<em>YU</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304192?cid=17" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/7/148923293767356.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304192?cid=17" target="_blank"><span>速看2017奥斯卡最佳影片《月光男孩》</span></a></p>
+                                    <p class="list-play"><em>474</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920081933452" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-01/2/8d0ffd95bbd17a4ed9cf2361840d56df.jpg!180x180">
+	                                                                        	<em>YU</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                     
+                        </ul>
+                    </div>
+                </div>
+                <span class="list-arrow-left als-prev"></span>
+                <span class="list-arrow-right als-next"></span>
+            </div>
+                        <!-- 搞笑 -->
+                        <div class="recommend-technology als-container lista">
+                <div class="technology-title">
+                	<p><span>C</span>omedy</p>
+        			<em>搞笑</em>
+                    <span class="technology-more"><a href="/video/category/cid/10" target="_blank"></a></span>
+                </div>
+                <div class="box-biggg">
+                    <div class="television-box clearfix als-viewport">
+                        <ul class="als-wrapper">
+                     		                            <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303468?cid=10" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com/imgface/origin/2017-01/0/148404079036920.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303468?cid=10" target="_blank"><span>囧闻一箩筐</span></a></p>
+                                    <p class="list-play"><em>6979</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920108827448" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-01/3/46a5ecce44933dd0f9a4b64fccad9d16.jpg!180x180">
+	                                                                        	<em>何仙姑夫</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303359?cid=10" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/6/148941788627464.png">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303359?cid=10" target="_blank"><span>【欢乐阿喜哥】十年磨一剑只为今晚的战役</span></a></p>
+                                    <p class="list-play"><em>48935</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920108411700" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-12/3/a4049a902575dbc7ed5130284ca60f54.jpg!180x180">
+	                                                                        	<em>欢乐阿喜哥</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304191?cid=10" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/3/148923156391576.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304191?cid=10" target="_blank"><span>张子栋 《我要回农村》</span></a></p>
+                                    <p class="list-play"><em>205</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920102071640" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-08/3/87a1aae5392edfe2cdea32a06556f3a6.png!180x180">
+	                                                                        	<em>妙蛙小司机</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304190?cid=10" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/8/148923154891217.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304190?cid=10" target="_blank"><span>文松《翡翠西瓜》</span></a></p>
+                                    <p class="list-play"><em>181</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920102071640" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-08/3/87a1aae5392edfe2cdea32a06556f3a6.png!180x180">
+	                                                                        	<em>妙蛙小司机</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304189?cid=10" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/8/148923153854912.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304189?cid=10" target="_blank"><span>郭麒麟《新卖吊票》</span></a></p>
+                                    <p class="list-play"><em>142</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920102071640" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-08/3/87a1aae5392edfe2cdea32a06556f3a6.png!180x180">
+	                                                                        	<em>妙蛙小司机</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304188?cid=10" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/9/148923152964087.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304188?cid=10" target="_blank"><span>张子栋《父爱》</span></a></p>
+                                    <p class="list-play"><em>108</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920102071640" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-08/3/87a1aae5392edfe2cdea32a06556f3a6.png!180x180">
+	                                                                        	<em>妙蛙小司机</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304187?cid=10" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/7/148923151711827.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304187?cid=10" target="_blank"><span>常远《装鳖的人》</span></a></p>
+                                    <p class="list-play"><em>127</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920102071640" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-08/3/87a1aae5392edfe2cdea32a06556f3a6.png!180x180">
+	                                                                        	<em>妙蛙小司机</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304186?cid=10" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/7/148923150737175.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304186?cid=10" target="_blank"><span>张小斐《笑看风云》</span></a></p>
+                                    <p class="list-play"><em>160</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920102071640" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-08/3/87a1aae5392edfe2cdea32a06556f3a6.png!180x180">
+	                                                                        	<em>妙蛙小司机</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304184?cid=10" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/1/148923148193779.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304184?cid=10" target="_blank"><span>张小斐毁形象变十三妹 为爱而战引全场泪崩</span></a></p>
+                                    <p class="list-play"><em>113</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920102071640" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-08/3/87a1aae5392edfe2cdea32a06556f3a6.png!180x180">
+	                                                                        	<em>妙蛙小司机</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                      
+                        </ul>
+                    </div>
+                </div>
+                <span class="list-arrow-left als-prev"></span>
+                <span class="list-arrow-right als-next"></span>
+            </div>
+                        <!-- 娱乐 -->
+                        <div class="recommend-amusemengt als-container lista">
+                <div class="amusemengt-title">
+                	<p><span>E</span>ntertainment</p>
+        			<em>娱乐</em>
+                    <span class="amusemengt-more"><a href="/video/category/cid/6" target="_blank"></a></span>
+                </div>
+                <div class="box-biggg">
+                    <div class="television-box clearfix als-viewport">
+                        <ul class="als-wrapper">
+                   			                            <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/296446?cid=6" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com/upload/origin/5/6a323dd51524972313bdd7b9f9d03508.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/296446?cid=6" target="_blank"><span>关八热话题</span></a></p>
+                                    <p class="list-play"><em>13199</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920094262756" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-03/7/e17e241b3bb465e0c9b487e1e31641c6.jpg!180x180">
+	                                                                        	<em>火星文化</em>
+                                    	</a>
+                                    </p>
+                                 </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/298233?cid=6" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com/imgface/origin/2016-10/0/147598049022941.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/298233?cid=6" target="_blank"><span>星座同道不是叔</span></a></p>
+                                    <p class="list-play"><em>6874</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920094262756" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-03/7/e17e241b3bb465e0c9b487e1e31641c6.jpg!180x180">
+	                                                                        	<em>火星文化</em>
+                                    	</a>
+                                    </p>
+                                 </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303949?cid=6" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/3/148773448346226.png">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303949?cid=6" target="_blank"><span>Youtube播放量超10亿的音乐MV</span></a></p>
+                                    <p class="list-play"><em>912</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920098553732" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-01/6/003e0d96929e67044ead068f15d1d776.jpg!180x180">
+	                                                                        	<em>蛇精狐狐</em>
+                                    	</a>
+                                    </p>
+                                 </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303948?cid=6" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/6/148773120631214.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303948?cid=6" target="_blank"><span>Youtube韩国2017年1月最热音乐MV Top20  </span></a></p>
+                                    <p class="list-play"><em>265</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920098553732" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-01/6/003e0d96929e67044ead068f15d1d776.jpg!180x180">
+	                                                                        	<em>蛇精狐狐</em>
+                                    	</a>
+                                    </p>
+                                 </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303946?cid=6" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/9/148766042984179.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303946?cid=6" target="_blank"><span>赵雷《成都》</span></a></p>
+                                    <p class="list-play"><em>2775</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920098553732" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-01/6/003e0d96929e67044ead068f15d1d776.jpg!180x180">
+	                                                                        	<em>蛇精狐狐</em>
+                                    	</a>
+                                    </p>
+                                 </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303823?cid=6" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/1/148652163128127.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303823?cid=6" target="_blank"><span>好似一部科幻大片的兰博基尼广告</span></a></p>
+                                    <p class="list-play"><em>3805</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920099207035" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-06/9/5edb1ed97c211836339830a8bc73a039.jpg!180x180">
+	                                                                        	<em>竜が我が敌を喰ら</em>
+                                    	</a>
+                                    </p>
+                                 </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303775?cid=6" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/4/148629540449141.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303775?cid=6" target="_blank"><span>姚明球衣退役演讲：不悔休斯顿生涯</span></a></p>
+                                    <p class="list-play"><em>1299</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920099207035" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-06/9/5edb1ed97c211836339830a8bc73a039.jpg!180x180">
+	                                                                        	<em>竜が我が敌を喰ら</em>
+                                    	</a>
+                                    </p>
+                                 </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303773?cid=6" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/9/148626329973820.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303773?cid=6" target="_blank"><span>赵雷《成都》写给一座城的情歌</span></a></p>
+                                    <p class="list-play"><em>2247</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920081778592" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com/imgface/origin/2015-09/16de901fd465ed1ecd73524e979c0111.jpg!180x180">
+	                                                                        	<em>瑶歌的逝者</em>
+                                    	</a>
+                                    </p>
+                                 </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303752?cid=6" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/0/148595262084835.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303752?cid=6" target="_blank"><span>小幸运日文版 - 流星</span></a></p>
+                                    <p class="list-play"><em>2403</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920082353015" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-03/0/98586a890f4889d2bc1b8434bc7b627c.jpg!180x180">
+	                                                                        	<em>长门有C</em>
+                                    	</a>
+                                    </p>
+                                 </div>
+                            </li>
+                                                     
+                        </ul>
+                    </div>
+                </div>
+                <span class="list-arrow-left als-prev"></span>
+                <span class="list-arrow-right als-next"></span>
+            </div>
+                        <!-- 次元 -->
+                        <div class="recommend-amuse als-container lista">
+                <div class="amuse-title">
+                	<p><span>A</span>nimation</p>
+        			<em>次元</em>
+                    <span class="amuse-more"><a href="/video/category/cid/16" target="_blank"></a></span>
+                </div>
+                <div class="box-biggg">
+                    <div class="television-box clearfix als-viewport">
+                        <ul class="als-wrapper">
+                   			                            <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304080?cid=16" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/3/148851517358243.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304080?cid=16" target="_blank"><span>《守望先锋》英雄故事：奥丽莎</span></a></p>
+                                    <p class="list-play"><em>1879</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920082353015" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-03/0/98586a890f4889d2bc1b8434bc7b627c.jpg!180x180">
+	                                                                        	<em>长门有C</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304074?cid=16" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/9/148842161971877.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304074?cid=16" target="_blank"><span>【God Knows】这些年我所追过的妖尾</span></a></p>
+                                    <p class="list-play"><em>618</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920082353015" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-03/0/98586a890f4889d2bc1b8434bc7b627c.jpg!180x180">
+	                                                                        	<em>长门有C</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304072?cid=16" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/0/148834685028583.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304072?cid=16" target="_blank"><span>【屎O说】十字路口的任天堂</span></a></p>
+                                    <p class="list-play"><em>924</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920082353015" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-03/0/98586a890f4889d2bc1b8434bc7b627c.jpg!180x180">
+	                                                                        	<em>长门有C</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304071?cid=16" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/8/148834177899744.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304071?cid=16" target="_blank"><span>飞檐走壁？民间真人版《刺客信条》！</span></a></p>
+                                    <p class="list-play"><em>893</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920082353015" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-03/0/98586a890f4889d2bc1b8434bc7b627c.jpg!180x180">
+	                                                                        	<em>长门有C</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304069?cid=16" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/0/148834035033389.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304069?cid=16" target="_blank"><span>【动漫MAD】如何用一杆钢笔换一个本子</span></a></p>
+                                    <p class="list-play"><em>483</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920082353015" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-03/0/98586a890f4889d2bc1b8434bc7b627c.jpg!180x180">
+	                                                                        	<em>长门有C</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304059?cid=16" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com/upload/origin/1/885b7b82451e514b4b6fa76da36f574e.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304059?cid=16" target="_blank"><span>《炉石传说》“勇闯安戈洛”开场动画</span></a></p>
+                                    <p class="list-play"><em>1067</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920082353015" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-03/0/98586a890f4889d2bc1b8434bc7b627c.jpg!180x180">
+	                                                                        	<em>长门有C</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304053?cid=16" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/0/148826410022816.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304053?cid=16" target="_blank"><span>【楽小漫x西四】樱与桃</span></a></p>
+                                    <p class="list-play"><em>143</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920085755245" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com/imgface/origin/2015-10/220d7ad4271013f440ca3a6a76052abf.jpg!180x180">
+	                                                                        	<em>Colorday</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304052?cid=16" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/5/148826408564380.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304052?cid=16" target="_blank"><span>【小米粥】siawase</span></a></p>
+                                    <p class="list-play"><em>153</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920085755245" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com/imgface/origin/2015-10/220d7ad4271013f440ca3a6a76052abf.jpg!180x180">
+	                                                                        	<em>Colorday</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304051?cid=16" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/6/148826406652429.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304051?cid=16" target="_blank"><span>【豆豆子】交织together</span></a></p>
+                                    <p class="list-play"><em>80</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920085755245" target="_blank">                                   	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com/imgface/origin/2015-10/220d7ad4271013f440ca3a6a76052abf.jpg!180x180">
+	                                                                        	<em>Colorday</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                       
+                        </ul>
+                    </div>
+                </div>
+                <span class="list-arrow-left als-prev"></span>
+                <span class="list-arrow-right als-next"></span>
+            </div>
+                        <!-- 生活 -->
+                        <div class="recommend-life als-container lista">
+                <div class="life-title">
+                	<p><span>M</span>oments</p>
+        			<em>生活</em>
+                    <span class="life-more"><a href="/video/category/cid/19" target="_blank"></a></span>
+                </div>
+                <div class="box-biggg">
+                    <div class="television-box clearfix als-viewport">
+                        <ul class="als-wrapper">
+                  			                            <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303373?cid=19" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com/imgface/origin/2017-01/8/148404529895900.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303373?cid=19" target="_blank"><span>胡言狼语</span></a></p>
+                                    <p class="list-play"><em>4231</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920108575941" target="_blank">                                    	
+                                    		                                        <img src="/themes/light/video/images/p-admin.png">
+	                                                                        	<em></em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/302994?cid=19" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/8/148945746890462.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/302994?cid=19" target="_blank"><span>《养宠七日谈》刚到家的幼犬突然腹泻怎么办</span></a></p>
+                                    <p class="list-play"><em>17211</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920102397623" target="_blank">                                    	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-08/3/e103e6fc22f40e566c7f17b0603fe72e.jpg!180x180">
+	                                                                        	<em>有宠</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/298231?cid=19" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/8/148939480869371.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/298231?cid=19" target="_blank"><span>【二更】为你，百炼钢成绕指柔</span></a></p>
+                                    <p class="list-play"><em>144319</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920098778848" target="_blank">                                    	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-05/6/b188b12c4b76a69bdabfba857407ff69.png!180x180">
+	                                                                        	<em>二更视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303014?cid=19" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com/imgface/origin/2016-12/3/148273562368652.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303014?cid=19" target="_blank"><span>商圈新视野</span></a></p>
+                                    <p class="list-play"><em>1193</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920107817607" target="_blank">                                    	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-12/0/d1b64145116c489e9f34d928844c6eb3.jpg!180x180">
+	                                                                        	<em>商圈新视野</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303157?cid=19" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com/imgface/origin/2017-03/0/148937461071674.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303157?cid=19" target="_blank"><span>味库美食视频：春季减肥必备美味-橙肉沙拉</span></a></p>
+                                    <p class="list-play"><em>115868</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920108067983" target="_blank">                                    	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2017-01/8/51d88738e0992fa028dc102e789b6fef.jpg!180x180">
+	                                                                        	<em>味库美食视频</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304201?cid=19" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/6/148929295663489.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304201?cid=19" target="_blank"><span>如何用褶皱纸制作 Mokara兰花</span></a></p>
+                                    <p class="list-play"><em>126</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920099357242" target="_blank">                                    	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-12/7/b64c5031c2ea245d9950d9630f957d1f.jpg!180x180">
+	                                                                        	<em>手工生活</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304200?cid=19" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/2/148929264265882.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304200?cid=19" target="_blank"><span>如何用褶皱纸制作红蜘蛛百合花</span></a></p>
+                                    <p class="list-play"><em>89</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920099357242" target="_blank">                                    	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-12/7/b64c5031c2ea245d9950d9630f957d1f.jpg!180x180">
+	                                                                        	<em>手工生活</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304199?cid=19" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/0/148929261041685.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304199?cid=19" target="_blank"><span>废纸工艺--如何用卷起的旧报纸制作笔筒</span></a></p>
+                                    <p class="list-play"><em>70</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920099357242" target="_blank">                                    	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-12/7/b64c5031c2ea245d9950d9630f957d1f.jpg!180x180">
+	                                                                        	<em>手工生活</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/304198?cid=19" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-03/6/148929232647145.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/304198?cid=19" target="_blank"><span>废品再利用  DIY 手机座充盒</span></a></p>
+                                    <p class="list-play"><em>82</em> 播放</p>
+                                    <p class="list-admin">
+                                    	<a href="/video/dynamic/fid/135601920099357242" target="_blank">                                    	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-12/7/b64c5031c2ea245d9950d9630f957d1f.jpg!180x180">
+	                                                                        	<em>手工生活</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                         
+                        </ul>
+                    </div>
+                </div>
+                <span class="list-arrow-left als-prev"></span>
+                <span class="list-arrow-right als-next"></span>
+            </div>
+                        <!-- 音乐 改为 趣玩 -->
+                        <div class="recommend-point1 als-container lista">
+                <div class="point1-title">
+                	<p><span>D</span>iy</p><em>趣玩</em>
+                    <span class="point1-more"><a href="/video/category/cid/26" target="_blank"></a></span>
+                </div>
+                <div class="box-biggg">
+                    <div class="television-box clearfix als-viewport">
+                        <ul class="als-wrapper">
+                  			                            <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303935?cid=26" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/5/148751551543263.png">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303935?cid=26" target="_blank"><span>高能天团  一流杂耍特技</span></a></p>
+                                    <p class="list-play"><em>1425</em> 播放</p>
+                                    <p class="list-admin"> 
+                                    	<a href="/video/dynamic/fid/135601920094385710" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-05/3/6664bc69ba6ed6a1606c7007095a5939.jpg!180x180">
+	                                    	                                    <em>亦心如初</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303890?cid=26" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/7/148730074747047.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303890?cid=26" target="_blank"><span>B-52轰炸机的日常维护和弹药挂载</span></a></p>
+                                    <p class="list-play"><em>2480</em> 播放</p>
+                                    <p class="list-admin"> 
+                                    	<a href="/video/dynamic/fid/135601920081438863" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-05/3/714a4709e55ab1f5a7a5fa00af10f00d.jpg!180x180">
+	                                    	                                    <em>天下</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303838?cid=26" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/4/148663992484359.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303838?cid=26" target="_blank"><span>教你手绘3D 旋涡鸣人</span></a></p>
+                                    <p class="list-play"><em>2219</em> 播放</p>
+                                    <p class="list-admin"> 
+                                    	<a href="/video/dynamic/fid/135601920085533952" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-06/7/055ab260056b24ceabd4fe5472bfcdff.png!180x180">
+	                                    	                                    <em>风迷精选</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303837?cid=26" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/9/148663374979690.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303837?cid=26" target="_blank"><span>开坦克去加油站</span></a></p>
+                                    <p class="list-play"><em>2553</em> 播放</p>
+                                    <p class="list-admin"> 
+                                    	<a href="/video/dynamic/fid/135601920081438863" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-05/3/714a4709e55ab1f5a7a5fa00af10f00d.jpg!180x180">
+	                                    	                                    <em>天下</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303835?cid=26" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/0/148661139068657.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303835?cid=26" target="_blank"><span>如何做一个坦克玩具车</span></a></p>
+                                    <p class="list-play"><em>2018</em> 播放</p>
+                                    <p class="list-admin"> 
+                                    	<a href="/video/dynamic/fid/135601920099207035" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-06/9/5edb1ed97c211836339830a8bc73a039.jpg!180x180">
+	                                    	                                    <em>竜が我が敌を喰ら</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303831?cid=26" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-02/8/148655236846342.jpg">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303831?cid=26" target="_blank"><span>迷之带感  火柴人版PPAP</span></a></p>
+                                    <p class="list-play"><em>2175</em> 播放</p>
+                                    <p class="list-admin"> 
+                                    	<a href="/video/dynamic/fid/135601920085533952" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-06/7/055ab260056b24ceabd4fe5472bfcdff.png!180x180">
+	                                    	                                    <em>风迷精选</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303744?cid=26" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-01/7/148569180760371.png">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303744?cid=26" target="_blank"><span>【原始技术】带床的草棚</span></a></p>
+                                    <p class="list-play"><em>4527</em> 播放</p>
+                                    <p class="list-admin"> 
+                                    	<a href="/video/dynamic/fid/135601920099207035" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-06/9/5edb1ed97c211836339830a8bc73a039.jpg!180x180">
+	                                    	                                    <em>竜が我が敌を喰ら</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303704?cid=26" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-01/8/148516191893101.png">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303704?cid=26" target="_blank"><span>简单手工：纸折小马</span></a></p>
+                                    <p class="list-play"><em>1326</em> 播放</p>
+                                    <p class="list-admin"> 
+                                    	<a href="/video/dynamic/fid/135601920099357242" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-12/7/b64c5031c2ea245d9950d9630f957d1f.jpg!180x180">
+	                                    	                                    <em>手工生活</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                        <li class="als-item">
+                                <div class="television-list">
+                                    <a href="/video/play/vid/303703?cid=26" target="_blank" class="abc">
+                                                                         	 <img src="http://img1tuzi.b0.upaiyun.com//imgface/origin/2017-01/5/148516178523402.png">
+                                                                            <span class="television-time"><em>播放</em></span>
+                                        <div class="television-gray"></div>
+                                    </a>
+                                    <p class="list-title"><a href="/video/play/vid/303703?cid=26" target="_blank"><span>纸折指尖小人儿</span></a></p>
+                                    <p class="list-play"><em>1448</em> 播放</p>
+                                    <p class="list-admin"> 
+                                    	<a href="/video/dynamic/fid/135601920099357242" target="_blank">                                  	
+                                    		                                     	<img src="http://avatar-img.b0.upaiyun.com//imgface/origin/2016-12/7/b64c5031c2ea245d9950d9630f957d1f.jpg!180x180">
+	                                    	                                    <em>手工生活</em>
+                                    	</a>
+                                    </p>
+                                </div>
+                            </li>
+                                                         
+                        </ul>
+                    </div>
+                </div>
+                <span class="list-arrow-left als-prev"></span>
+                <span class="list-arrow-right als-next"></span>
+            </div>
+            
+        </div>       
+    </div>
+ <div id="slice6" class="slice page6">
+            <div class="page6 ">
+                <div class="footer">
+                    <div class="main mainf clearfix">
+                        <div class="sh-left">
+                            <div class="share clearfix">                                
+                                    <div class="wx sol">
+                                        <em></em>
+                                        <div class="wxs"><img src="/themes/light/video/images/wxm.png"></div>               
+                                    </div>
+                                    <div class="qq sol">
+                                        <em></em>
+                                        <div class="q-content">
+                                            <p>QQ群：264649059</p>
+                                        </div>                             
+                                    </div>
+                                    <div class="sina sol">                                        
+                                        <a href="http://weibo.com/u/5262489373" target="_blank">
+                                           <em></em>
+                                        </a>                                    
+                                    </div>
+                                    <div class="mail sol">
+                                        <em></em>
+                                        <div class="m-content">
+                                            <p>fengmi@bftv.com</p>
+                                        </div>                                    
+                                    </div>
+                                                                
+                            </div>
+                            <p class="been">Copyright © 2015-2016 Fengmi.tv All Rights Reserved 粤ICP备15093380号-1 </p>
+                        </div>
+                        <div class="sh-right clearfix">
+                                <div class="ewm-img"><img src="/themes/light/video/images/ewm.png"></div>
+                                <div class="m-style">
+                                    <a href="https://itunes.apple.com/us/app/feng-mi/id1057814377?l=zh&ls=1&mt=8"><div class="ios iosfoot"></div></a>
+                                    <a href="http://romtuzi.b0.upaiyun.com//upload/fengmi-beta/90/fengmi-1.7-beta.apk"><div class="android androidfoot"></div></a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gray"></div>    <!-- 页面遮罩层点击视频时弹出 -->
+        <!-- 页面友好弹出提示 -->
+        <div class="upload-suc upload-suc-s">
+                <p>创建成功创建失败请上传</p>
+                <div class="ok-choose clearfix">
+                	<div class="ok-cancle">取消</div>
+                    <div class="ok-sure">确定</div>
+                </div>
+         </div>
+    </div>   
+    
+
+</div>
+<form method="post" id="update-avatar-form" name="update-avatar-form" action="">
+	<input type="hidden" id="x" name="x" />
+	<input type="hidden" id="y" name="y" />
+	<input type="hidden" id="w" name="w" />
+	<input type="hidden" id="h" name="h" />
+	<input type="hidden" id="imgw" name="imgw" />
+	<input type="hidden" id="imgh" name="imgh" />
+	<input type="hidden" id="filename" name="filename" />
+	<input type="hidden" name="flag" value='cutImg'/>
+	<input type="hidden" id="imgtype" name="imgtype" value='hit'/>
+</form>
+  <div id="class" class="">
+	<div id="pop-bg" class="pop-bg hide"></div>
+    <div id="pop-con" class="pop-con hide">
+		  <div id="me2-pop" class="me2-pop pop-shadow change-photo-pop">
+			<!--<div class="me2-pop-title">
+		    	<em class="close"></em>
+		        <span>编辑封面</span>
+		    </div>-->
+		    <form>
+		        <div class="me2-pop-con">
+		        	<div class="change-photo-img">
+		                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		                  <tr>
+		                   <td height="440" align="center" valign="middle"><div class="show" style="display:table-cell;vertical-align:middle;height:450px;width:500px;"></div></td>
+		                  </tr>
+		              	</table>
+		            </div>
+		        </div>
+		        <div class="me2-pop-btn">
+		            <p class="cancel-btn">取消</p>
+		            <p class="save-btn" onclick="cutCover();">保存</p>
+		        </div>
+		    </form>
+		</div>
+    </div>     
+</body>
+</html>	
+<script>
+	//跨域获取数据
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?bfeafb046812318d82531b78ce38073d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".lista").als({  //滚动插件
+        visible_items: 4,
+        scrolling_items: 2,
+        orientation: "horizontal",
+        circular: "no",
+        autoscroll: "no",
+        interval: 5000,
+        speed: 500,
+        easing: "linear",
+        direction: "right",
+        start_from: 0
+    });
+    
+    $(".television-list").hover(function() {
+        $(this).addClass('current').siblings().removeClass('current');
+    }, function() {
+       $(this).removeClass('current');
+    });
+    $(".hot-littlestar li").hover(function() {
+        $(this).addClass('current').siblings('li').removeClass('current');
+    }, function() {
+       $(this).removeClass('current');
+    });
+  
+
+
+   var $key=0; 
+   var timer=setInterval(autoplay, 3000);  /*开启定时器*/
+   function autoplay(){
+        $(".hot-star ul li").eq($key).fadeOut(600);  
+        $key++;  
+
+        $key=$key%$(".hot-star ul li").length;  
+        $(".hot-star ul li").eq($key).fadeIn(600);  
+        /*console.log($key);*/
+        //console.log($key);
+        $(".hot-star ol li").eq($key).addClass('current').siblings().removeClass('current');
+   }
+
+   $(".hot-star").hover(function() {
+      clearInterval(timer);
+      timer=null;   
+   }, function() {
+     clearInterval(timer);  
+     timer=setInterval(autoplay, 2000);  
+   });
+
+  $(".hot-star ol li").click(function(event) {
+        $(".hot-star ul li").eq($key).fadeOut(600);  
+        $key=$(this).index();
+        $(this).addClass('current').siblings().removeClass("current");
+        $(".hot-star ul li").eq($key).fadeIn(600); 
+    });
+    
+    /*导航滑动门*/
+    var $el, leftPos, newWidth;
+    $mainNav2 = $("#example-two");
+
+    $mainNav2.append("<li id='magic-line-two'></li>");
+
+    var $magicLineTwo = $("#magic-line-two");
+    
+    $magicLineTwo
+        .width($(".current_page_item_two").width())
+        .css("left", $(".current_page_item_two a").position().left)
+        .data("origLeft", $(".current_page_item_two a").position().left)
+        .data("origWidth", $magicLineTwo.width())
+        .data("origColor", $(".current_page_item_two a").attr("rel"));
+                
+    $("#example-two a").hover(function() {
+        $el = $(this);
+        leftPos = $el.position().left;
+        newWidth = $el.parent().width();
+        $magicLineTwo.stop().animate({
+            left: leftPos,
+            width: newWidth,
+            backgroundColor: $el.attr("rel")
+        })
+    }, function() {
+        $magicLineTwo.stop().animate({
+            left: $magicLineTwo.data("origLeft"),
+            width: $magicLineTwo.data("origWidth"),
+            backgroundColor: $magicLineTwo.data("origColor")
+        });    
+    });
+    
+    /* Kick IE into gear */
+    $(".current_page_item_two a").mouseenter();
+    
+    
+    
+	 $('.indexSearch').show();  
+     $("#key,#keyword").bind('keypress',function(event)
+     {  	
+     	if(event.keyCode == "13")
+     	{ 	
+     		var keyword = $(this).val();	
+			window.open("/video/search/?keyword="+keyword, '_blank');
+     	}
+ 	 });
+ 	
+ 	 $(".line-button,.videoSearch").on('click', function(event) { 
+     	var keyword = $('#key').val();	
+		window.open("/video/search/?keyword="+keyword, '_blank');
+     });
+     
+     if($("document").find("ol")){
+     	$(".video-index").addClass('current');
+     }
+}); 
+</script>    
