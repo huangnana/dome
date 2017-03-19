@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//				var a=1;
+//				function fn1(){
+//					var b=2;
+//					function fn3(){
+//						var c= a+b;
+//						return c;
+//					}
+//				return fn3();
+//				}
+//				console .log(fn1())
+//				var obj = {};
+//				var arr = [];
+//				console.log(obj instanceof Object)
+//				console.log(arr instanceof Array)
+//				console.log(obj.constructor === Object)
+//				console.log(arr.constructor === Array)
+				(function(){
+					var a=b=3;  // b=1 var a=b;  b是全局变量在外面可以访问的到，而a是局部变量，访问不到
+				})();
+				console.log(b )
+				var arr = "john".split('')
+				console.log(arr)
+				
+				function clone(obj) {
+				    //判断是对象，就进行循环复制
+				    if (typeof obj === 'object' && typeof obj !== 'null') {
+				        // 区分是数组还是对象，创建空的数组或对象
+				        var o = Object.prototype.toString.call(obj).slice(8, -1) === "Array" ? [] : {};
+				        for (var k in obj) {
+				            // 如果属性对应的值为对象，则递归复制
+				            if(typeof obj[k] === 'object' && typeof obj[k] !== 'null'){
+				                o[k] = clone(obj[k])
+				            }else{
+				                o[k] = obj[k];
+				            }
+				        }
+				    }else{ //不为对象，直接把值返回
+				        return obj;
+				    }
+				    return o;
+				}
+				
+				var o ={
+					a:1,b:2
+				}
+				var c = clone(o)
+				o.a=3;
+				console.log(c)
+		</script>
+	</body>
+</html>
