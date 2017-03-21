@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var d1='2017-1-2';
+			var d2='2017-2-3';
+			console.log(d1-d2)
+			console.log(parseInt('d1='+2017))
+			console.dir(Promise)
+			// 深度克隆一个队形
+			function clone(obj){
+				if(!(obj.constructor === Object)){
+					return
+				}
+				var defauls ={};
+				for(var k in obj){
+					defauls[k]=obj[k];
+					clone(obj[k]);
+				}
+				return defauls;
+			}
+			console.log(clone({a:{c:2},b:[1,2,{d:2}]}))
+			
+			// 一个字符串的字节长度
+			function GetBytes(str){
+		         var len = str.length;
+		         var bytes = len;
+			     for(var i=0; i<len; i++){
+	                if (str.charCodeAt(i) > 255) bytes++;
+			     }
+		         return bytes;
+			}
+			alert(GetBytes("你好,as"));
+			
+//			截取字符串abcdefg的efg
+			var str = "abcdefg";
+			if (/efg/.test(str)) {
+			     var efg = str.substr(str.indexOf("efg"), 3);
+			     alert(efg);
+			}
+			
+//			请给出异步加载js方案，不少于两种
+//			默认情况javascript是同步加载的，也就是javascript的加载时阻塞的，后面的元素要等待javascript加载完毕后才能进行再加载，对于一些意义不是很大的javascript，如果放在页头会导致加载很慢的话，是会严重影响用户体验的。
+			
+//			异步加载方式：
+//			(1) defer，只支持IE
+//			(2) async：
+//			(3) 创建script，插入到DOM中，加载完毕后callBack，见代码：
+			function loadScript(url, callback){
+	             var script = document.createElement("script")
+	             script.type = "text/javascript";
+                    if (script.readyState){ //IE
+                         script.onreadystatechange = function(){
+                            if (script.readyState == "loaded" ||
+                                script.readyState == "complete"){
+                                script.onreadystatechange = null;
+                                callback();
+                             }
+                          };
+                   } else { //Others: Firefox, Safari, Chrome, and Opera
+                           script.onload = function(){
+                             callback();
+                      };
+		   		  }
+			    script.src = url;
+			    document.body.appendChild(script);
+			}
+			
+//			29. 多浏览器检测通过什么？
+//			（1） navigator.userAgent
+//			（2） 不同浏览器的特性，如addEventListener
+
+//			30. js的基础对象有那些, window和document的常用的方法和属性列出来
+//			String,Number,Boolean
+//			
+//			Window:
+//			方法：setInterval,setTimeout,clearInterval,clearTimeout,alert,confirm,open
+//			属性：name,parent,screenLeft,screenTop,self,top,status
+//			
+//			Document
+//			方法：createElement,execCommand,getElementById,getElementsByName,getElementByTagName,write,writeln
+//			属性：cookie,doctype,domain,documentElement,readyState,URL,
+//			
+//			31. 前端开发的优化问题
+//			（1） 减少http请求次数：css spirit,data uri
+//			（2） JS，CSS源码压缩
+//			（3） 前端模板 JS+数据，减少由于HTML标签导致的带宽浪费，前端用变量保存AJAX请求结果，每次操作本地变量，不用请求，减少请求次数
+//			（4） 用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能
+//			（5） 用setTimeout来避免页面失去响应
+//			（6） 用hash-table来优化查找
+//			（7） 当需要设置的样式很多时设置className而不是直接操作style
+//			（8） 少用全局变量
+//			（9） 缓存DOM节点查找的结果
+//			（10） 避免使用CSS Expression
+//			（11） 图片预载
+//			（12） 避免在页面的主体布局中使用table，table要等其中的内容完全下载之后才会显示出来，显示比div+css布局慢
+//			
+//			32. 如何控制网页在网络传输过程中的数据量
+//			启用GZIP压缩
+//			保持良好的编程习惯，避免重复的CSS，JavaScript代码，多余的HTML标签和属性
+
+		</script>
+	</body>
+</html>
