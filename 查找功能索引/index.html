@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			 td {
+       			 text-align: center;
+       		}
+		</style>
+	</head>
+	<body>
+		<table border="1" width="50%" id="tab1">
+		    <thead>
+		    <tr>
+		        <th>子用例名</th>
+		        <th>设备名</th>
+		        <th>命令</th>
+		    </tr>
+		    </thead>
+		    <tbody></tbody>
+		</table>
+	</body>
+	<script>
+		var data =[
+			{
+				id:0,
+				name:"子用例名1",
+				equ:[],
+				order:['or1','or2']
+			},
+			{
+				id:1,
+				name:"子用例名2",
+				equ:[],
+				order:['or1','or2','or3']
+			},
+			{
+				id:2,
+				name:"子用例名3",
+				equ:[],
+				order:['or1','or2']
+			},
+			{
+				id:3,
+				name:"子用例名4",
+				equ:[],
+				order:['or1','or2']
+			},
+		]
+		var tBody = document.getElementsByTagName("tbody")[0];
+		creatTr(data);
+		function creatTr(data){
+			for(var i=0;i<data.length;i++){
+				var tr = document.createElement("tr");
+			}
+			var tr = document.createElement("tr");
+			var td = document.createElement("td");
+			td.innerHTML="1";
+			tr .appendChild( td );
+			tBody .appendChild( tr );
+		}
+	</script>
+</html>
