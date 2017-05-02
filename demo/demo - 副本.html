@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		#a-box a { 
+			text-decoration:none;
+			display: inline-block;
+			margin: 2px 10px;
+		}
+		#a-box a:visited{   /*伪类控制连接被访问后变颜色*/
+			color: red;
+		}
+		#list a{
+			display: inline-block;
+			margin-left: 50px;
+		}
+		#list span{
+			display: inline-block;
+			width: 50px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id = "a-box"></div>
+	<ul id="list"></ul>
+	<div class = top-box>
+		<a id="top" href="javascript:scroll(0,0)" >回到顶部</a>
+	</div>
+	<!-- 锚点控制回到顶部的最简单写法 -->
+</body>
+	<script>
+	// 动态生成a标签锚点的过程
+	var aBox = document.getElementById("a-box");
+	var html = "";
+	for (var i = 0; i < 100; i++) {
+		html+="<a href = '#"+i+"'>去到"+i+"</a>"
+	}
+	aBox.innerHTML=html;
+	// 动态生成数字列表的过程
+	var list = document.getElementById("list");
+	var str = "";
+	for (var i = 0; i < 100; i++) {
+		str+="<li id = '"+i+"'><span>"+i+"</span> </li>"
+	}
+	list.innerHTML=str;
+	// 当点击a标签的时候页面的hash值发生变 以下是当hash发生变化时做的事情（对应锚点的span元素颜色发生变化，便于查找）
+	var spans = document.getElementsByTagName("span");
+	onhashchange=function(){
+		// console.log(window.location.hash.slice(1));
+		var index = window.location.hash.slice(1);
+		for (var i = spans.length - 1; i >= 0; i--) {
+			spans[i].style.backgroundColor="";
+		}
+		spans[index].style.backgroundColor="red";
+	}
+	</script>
+</html>

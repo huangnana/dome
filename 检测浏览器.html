@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+<title>detect browser</title>
+
+<script type="text/javascript">
+
+function check(reg) {
+
+var ug = navigator.userAgent.toLowerCase();
+
+return reg.test(ug);
+
+}
+
+function checkBrowser() {
+
+var ug = navigator.userAgent.toLowerCase();
+
+var userAgent = document.getElementById("userAgent");
+
+userAgent.innerHTML = "浏览器的用户代理报头：" + ug;
+
+var browserType = "";
+
+var ver = "";
+
+//检测IE及版本
+
+var IE = ug.match(/msie\s*\d\.\d/); //提取浏览器类型及版本信息，注match()方法返回的是数组而不是字符串
+
+var isIE = check(/msie/);
+
+if(isIE) {
+
+browserType = "Internet Explorer";
+
+ver = IE.join(" ").match(/[0-9]/g).join("."); //先用join()方法转化为字符串，然后用match()方法匹配到版本信息，再用join()方法转化为字符串
+
+}
+
+//检测chrome及版本
+
+var chrome = ug.match(/chrome\/\d\.\d/gi);
+console.log(chrome)
+
+var isChrome = check(/chrome/);
+
+if(isChrome) {
+
+browserType = "Chrome";
+
+// ver = chrome.join(" ").match(/[0-9]/g).join(".");
+
+}
+
+//检测firefox及版本
+
+var firefox = ug.match(/firefox\/\d\.\d/gi);
+
+var isFirefox = check(/firefox/);
+
+if(isFirefox) {
+
+browserType = "Firefox";
+
+ver = firefox.join(" ").match(/[0-9]/g).join(".");
+
+}
+
+var browser = document.getElementById("browser");
+
+browser.innerHTML = "您正在使用的浏览器为：" + browserType + "<span style='padding-left:15px;'>版本为：</span>" + ver;
+
+}
+
+</script>
+
+</head>
+
+<body onload="checkBrowser()">
+
+<p id="userAgent"></p>
+
+<p id="browser"></p>
+<script>
+	if (document.all){ 
+		alert("IE浏览器"); 
+	}else{ 
+		alert("非IE浏览器"); 
+	} 
+	if (!!window.ActiveXObject){ 
+		alert("IE浏览器"); 
+	}else{ 
+		alert("非IE浏览器"); 
+	} 
+	var isIE=!!window.ActiveXObject; 
+	var isIE6=isIE&&!window.XMLHttpRequest; 
+	var isIE8=isIE&&!!document.documentMode; 
+	var isIE7=isIE&&!isIE6&&!isIE8; 
+	if (isIE){ 
+		if (isIE6){ 
+			alert("ie6"); 
+		}else if (isIE8){ 
+			alert("ie8"); 
+		}else if (isIE7){ 
+			alert("ie7"); 
+		} 
+	} 
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		#top-box{
+			position: fixed;
+			bottom: 0;
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<ul id="list"></ul>
+	<div id = "top-box">
+		<a id="top" href="javascript:scroll(0,0)" >回到顶部</a>
+	</div>
+	<!-- 锚点控制回到顶部的最简单写法 -->
+</body>
+	<script>
+	// 动态生成数字列表的过程
+	var list = document.getElementById("list");
+	var str = "";
+	for (var i = 0; i < 100; i++) {
+		str+="<li id = '"+i+"'><span>"+i+"</span> </li>"
+	}
+	list.innerHTML=str;
+	</script>
+</html>

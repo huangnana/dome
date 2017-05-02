@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>风迷-发现新鲜视 我有我看法 </title>    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Description" content="风迷，支持上传分享，欢迎优秀的原创作者。风迷精选将每日推荐数十部优质视频，影视热评、生活创意、VR视频等，每一部视频都会让你的生活更丰富，欢迎成为风迷。" />
+    <meta name="Keywords" content="VR视频、全景视频、影音播放器、暴风TV、搞笑视频、暴走大事件、美食、风迷精选、风迷、Fengmi" />
+    <link rel="shortcut icon" href="/themes/light/video/images/favicon.ico"  /> 
+    <link rel="stylesheet" href="/themes/light/video/css/dropkick.css" > 
+    <link rel="stylesheet" href="/themes/light/video/css/fmpersonal.css" >
+    <link rel="stylesheet" href="/themes/light/video/css/fmmain.css" >
+    <link rel="stylesheet" href="/themes/light/video/css/laydate.css" >
+    <link rel="stylesheet" href="/themes/light/user/css/uploadify.css" >
+    <link rel="stylesheet" href="/themes/light/user/css/jquery.Jcrop.css" >
+    <link rel="stylesheet" href="/themes/light/video/css/fmstyle_b.css" media="screen and (min-width: 1440px)">  
+    <link rel="stylesheet" href="/themes/light/user/css/pop.css" >
+    <!--[if IE]> 
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script type="text/javascript" src="/themes/light/video/js/PIE.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="/themes/light/video/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/themes/light/video/js/XCheck.js"></script>  
+    <script type="text/javascript" src="/themes/light/user/js/cropbox.js"></script>
+    <script type="text/javascript" src="/themes/light/user/js/jquery.dropkick-min.js"></script>
+    <script type="text/javascript" src="/themes/light/video/js/uploadsdk.min.js"></script>
+    <script type="text/javascript" src="/themes/light/video/js/jquery.uploadify.js"></script>
+	<script type="text/javascript" src="/themes/light/user/js/jquery.Jcrop.js"></script>
+	<script type="text/javascript" src="/themes/light/video/js/hero.js"></script>
+	<script type="text/javascript" src="/themes/light/video/js/jquery.als-1.7.min.js"></script>
+</head>
+<body><script type="text/javascript" src="/themes/light/user/js/json2.js"></script>
+<script type="text/javascript" >
+ /*统计剩余字数*/
+	function getLength(str) {
+		var cArr = str.match(/[^\x00-\xff]/ig);
+		return str.length + (cArr == null ? 0 : cArr.length);
+	}
+
+	function noticeLimit(inputEle, max, noticeid) {
+
+		if (getLength(inputEle.value) > max * 2) {
+			while (1) {
+				inputEle.value = inputEle.value.substr(0, inputEle.value.length - 1);
+				if (getLength(inputEle.value) <= max * 2)
+					break;
+			}
+		}
+		if (noticeid)
+			document.getElementById(noticeid).textContent = max - Math.ceil(getLength(inputEle.value) / 2);
+	}
+	function uploadLimit(str, max) {
+
+		if (getLength(str) > max * 2) {
+			while (1) {
+				str = str.substr(0, str.length - 1);
+				if (getLength(str) <= max * 2)
+					break;
+			}
+		}
+		return str;
+	}
+ </script>
+<div id="actor" class="actor-p">
+    <!-- 此处导航栏 -->
+	<nav> 
+    <div class="main-n main clearfix">
+        <a href="/"><img src="/themes/light/video/images/logob.png" class="logoimg"></a>
+        <div class="two-couple">
+            <a href="/" class="video-index" ><em>首页</em></a><a href="/user/index" class="caimashroom"><em>下载</em></a><!--<a href="/video/about" class="ab-riverrun" style="margin-left:30px;"><em>关于</em></a>-->
+        </div>
+        <div class="indexSearch nav-indexSearch"> <!--style="display:none;"-->
+             <input id="key" name="keyword" class="searchAll" type="text" placeholder="请输入片单名称或用户名" value="">
+             <span id="videoSearch" class="videoSearch"></span>
+        </div>
+        <div class="tips-ling "><!--有提醒时添加小黄点 tips-ling 添加current-->
+        	        </div>
+        
+        <a class="upload-quick" target="_blank"></a>
+                <div class="n-right-admin">	
+            <div class="over-admin-img">
+            	<a href="/ucenter/mysheet">
+            	                    <img src="/themes/light/video/images/p-admin.png">
+                                </a>
+            </div>
+            <div class="over-admin-list">
+                <span class="indexarrow"></span>
+                <a href="/ucenter/mysheet" class="per-center"><div class="href-per">个人中心</div></a>
+               <a href="/ucenter/info"><div class="href-edit">个人设置</div></a>
+               <a href="#" class="real-exit"><div class="href-exit">退出账号</div></a>
+            </div>
+        </div>
+            </div>
+    <script type="text/javascript">
+		$(".tips-ling").on('click', function(event) {
+							window.open("/ucenter/mynotice");
+				     });
+	     
+	    $(".tips-ling a").on('click',function(e){
+		    e.stopPropagation();
+		})
+	     
+	     $(".upload-quick").on('click', function(event) {
+							window.open("/ucenter/addsheet");
+				     });
+	</script>
+</nav>    <!-- 导航栏over -->
+    <div class="main">
+       <div class="circle-add-title">
+       	  制作片单
+       </div>
+       <div class="circle-leader clearfix" >
+            <div class="leader-img">
+                <img id="pd_cover" src="/themes/light/user/images/col-img.png">
+                <span>封面建议尺寸: 920 x 530</span>
+            </div>
+            <div class="leader-des">
+                <input id="vid" name="vid" class="leader-title" type="hidden" value="0">
+                <span class="title-number" id="wordCheck1"></span>
+                <input id="pd_name" name="name" class="leader-title" type="text" value="" placeholder="标题"  onkeyup="noticeLimit(this,20,'wordCheck1')" >
+                <span class="title-number wordCheck3" id="wordCheck3"></span>
+                <textarea  id="pd_desc" class="leader-dess" placeholder="简介"  onkeyup="noticeLimit(this,140,'wordCheck3')" ></textarea>
+                <div class="sheet-choose clearfix">             	
+	            	<ul class="radio radio-blue">
+	            		<li style="margin-right:16px;">片单类型:</li>
+						<li class="selected">
+						     <em><input type="hidden" class="input_hide" name="type" value="0"></em>普通片单
+						 </li>
+						 <li>
+						      <em><input type="hidden" class="input_hide" name="type" value="1"></em>VR片单
+						  </li>
+	                </ul>
+	            </div>
+	            <div class="list-button">
+
+                        <div class="list-add">添加视频</div>
+	                    <a id="upload" style="display: inline-block;opacity:0;cursor: pointer;position:absolute; left: 0px; bottom:0px; width:93px; height:34px;"></a>
+                        
+                        <!--  <div class="list-public">发布</div> -->
+                        <!-- 当管理片单点进来时添加和发布按钮隐藏或删除 只留下保存按钮 -->
+                        <div id="publish" class="list-savel">提交</div>
+                </div>
+            </div>
+            <div class="change-photo">
+            	<form>
+					<div id="queue"></div>
+					<input id="pd_upload" name="diy_orgimg" type="file" multiple="true" class="upload-file" name="upload-file" />
+				</form>
+			</div> 
+            <div class="leader-circle-up-btn">上传封面<input type="file" class="leader-upload" ></div>
+            
+        </div>
+        <div class="circle-allup circle-two">
+            <div class="circle-list">
+                <div class="list-top clearfix">
+                    <p id="tvtotal" >分集</p> 
+                    
+                </div>
+                <div class="admin-list"></div>
+            </div>
+            <div class="circle-up">
+                
+                <div class="circle-myvideo">
+                    <form class="me-select">
+                        <ul id="me-select-list">                       	
+                                   
+                        </ul>
+                    </form>
+                </div>
+       
+                <div class="url-choose">
+                    <div class="url-cancle">取消</div>
+                    <div class="url-sure">确定</div>
+                </div>
+            </div>
+            <div class="circle-edit">
+                <div class="circle-img clearfix">
+                    <div class="img-pro"><img id="cover" src="/themes/light/user/images/ugly.png"></div>
+                    <div class="change-photo">
+	                	<form>
+							<div id="queue"></div>
+							<input id="cover_upload" name="diy_orgimg" type="file" multiple="true" class="upload-file" name="upload-file" />
+						</form>
+					</div> 
+                    <div class="circle-up-btn" >上传封面<input type="file" class="upposter" ></div>
+                    <div class="video-poster-btn">
+                                <span>视频截图</span>
+                    </div>
+                    <div class="poster-preview">
+                        <ul class="cleafix">
+                        </ul>
+                    </div>
+                </div>
+                <div class="circle-lab-title">
+                	<span class="title-number wordCheck2" id="wordCheck2"></span>
+                    <div class="lab-title">
+
+                        <input  name="name" id="name" class="c-title"  type="text" value="" placeholder="标题"  onkeyup="noticeLimit(this,20,'wordCheck2')" >
+                    </div>
+                    <div class="lab-dess">
+						<span class="title-number wordCheck4" id="wordCheck4"></span>
+                        <textarea class="circle-dess" id="dess" placeholder="简介"  onkeyup="noticeLimit(this,140,'wordCheck4')" ></textarea>
+                    </div>
+                    <input  name="pid" id="pid" type="hidden" value="">
+                </div>
+                <div class="circle-choose">
+                    <div class="circle-cancle">取 消</div>
+                    <div class="circle-save">保 存</div>
+                </div>
+            </div>
+            <div class="face-changecir"  id="wrap2">
+                <div class="change-imgcir">
+                    <div class="imageBoxcir">
+                        <div class="thumbBoxcir"></div>
+                    </div>
+                </div>
+
+                <div class="face-choosecir clearfix">
+                    <div class="face-canclecir">取消</div>
+                    <div class="face-savecir" id="btnCropcir">保存</div>
+                </div>
+            </div>
+            <div class="circle-uping">
+                <p id="publish_notice">信息已保存，等待视频上传成功后会自动提交</p>
+                <div class="back-edit"><p>返回修改</p></div>
+            </div>
+            <div class="circle-del">
+                <div class="del-pink"></div>
+                <p>确定删除分集吗?</p>
+                <div class="del-choose clearfix">
+                    <div class="del-cancle">取消</div>
+                    <div class="del-sure">确定</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<div id="class" class="">
+	<div id="pop-bg" class="pop-bg hide"></div>
+	<div id="pop-con" class="pop-con hide">
+	 	<div id="me2-pop" class="me2-pop pop-shadow change-photo-pop">
+	    <form>
+	        <div class="me2-pop-con">
+	        	<div class="change-photo-img">
+	                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	                  <tr>
+	                   <td height="440" align="center" valign="middle"><div class="show" style="display:table-cell;vertical-align:middle;height:450px;width:500px;"></div></td>
+	                  </tr>
+	              	</table>
+	            </div>
+	        </div>
+	        <div class="me2-pop-btn">
+	            <p class="cancel-btn">取消</p>
+	            <p class="save-btn" onclick="cutCover();">保存</p>
+	        </div>
+	    </form>
+	</div>
+</div> 
+</div>
+ <div id="slice6" class="slice page6">
+            <div class="page6 ">
+                <div class="footer">
+                    <div class="main mainf clearfix">
+                        <div class="sh-left">
+                            <div class="share clearfix">                                
+                                    <div class="wx sol">
+                                        <em></em>
+                                        <div class="wxs"><img src="/themes/light/video/images/wxm.png"></div>               
+                                    </div>
+                                    <div class="qq sol">
+                                        <em></em>
+                                        <div class="q-content">
+                                            <p>QQ群：264649059</p>
+                                        </div>                             
+                                    </div>
+                                    <div class="sina sol">                                        
+                                        <a href="http://weibo.com/u/5262489373" target="_blank">
+                                           <em></em>
+                                        </a>                                    
+                                    </div>
+                                    <div class="mail sol">
+                                        <em></em>
+                                        <div class="m-content">
+                                            <p>fengmi@bftv.com</p>
+                                        </div>                                    
+                                    </div>
+                                                                
+                            </div>
+                            <p class="been">Copyright © 2015-2016 Fengmi.tv All Rights Reserved 粤ICP备15093380号-1 </p>
+                        </div>
+                        <div class="sh-right clearfix">
+                                <div class="ewm-img"><img src="/themes/light/video/images/ewm.png"></div>
+                                <div class="m-style">
+                                    <a href="https://itunes.apple.com/us/app/feng-mi/id1057814377?l=zh&ls=1&mt=8"><div class="ios iosfoot"></div></a>
+                                    <a href="http://romtuzi.b0.upaiyun.com//upload/fengmi-beta/90/fengmi-1.7-beta.apk"><div class="android androidfoot"></div></a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gray"></div>    <!-- 页面遮罩层点击视频时弹出 -->
+        <!-- 页面友好弹出提示 -->
+        <div class="upload-suc upload-suc-s">
+                <p>创建成功创建失败请上传</p>
+                <div class="ok-choose clearfix">
+                	<div class="ok-cancle">取消</div>
+                    <div class="ok-sure">确定</div>
+                </div>
+         </div>
+    </div>   
+    
+
+</div>
+<form method="post" id="update-avatar-form" name="update-avatar-form" action="">
+	<input type="hidden" id="x" name="x" />
+	<input type="hidden" id="y" name="y" />
+	<input type="hidden" id="w" name="w" />
+	<input type="hidden" id="h" name="h" />
+	<input type="hidden" id="imgw" name="imgw" />
+	<input type="hidden" id="imgh" name="imgh" />
+	<input type="hidden" id="filename" name="filename" />
+	<input type="hidden" name="flag" value='cutImg'/>
+	<input type="hidden" id="imgtype" name="imgtype" value='hit'/>
+</form>
+  <div id="class" class="">
+	<div id="pop-bg" class="pop-bg hide"></div>
+    <div id="pop-con" class="pop-con hide">
+		  <div id="me2-pop" class="me2-pop pop-shadow change-photo-pop">
+			<!--<div class="me2-pop-title">
+		    	<em class="close"></em>
+		        <span>编辑封面</span>
+		    </div>-->
+		    <form>
+		        <div class="me2-pop-con">
+		        	<div class="change-photo-img">
+		                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		                  <tr>
+		                   <td height="440" align="center" valign="middle"><div class="show" style="display:table-cell;vertical-align:middle;height:450px;width:500px;"></div></td>
+		                  </tr>
+		              	</table>
+		            </div>
+		        </div>
+		        <div class="me2-pop-btn">
+		            <p class="cancel-btn">取消</p>
+		            <p class="save-btn" onclick="cutCover();">保存</p>
+		        </div>
+		    </form>
+		</div>
+    </div>     
+</body>
+</html>	
+<script src="../light7-demo/jquery-3.1.1.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?bfeafb046812318d82531b78ce38073d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+<script>
+	$("#videoSearch").on('click', function(event) { 
+     	var keyword = $('#key').val();	
+		location.href="/video/search/?keyword="+keyword;
+     });
+
+
+	//选择片单类型
+	$(".radio li").on('click', function(event) {
+	    event.preventDefault();
+	    $(this).addClass('selected').siblings().removeClass('selected');
+	});
+        
+	$('#pd_upload').uploadify({
+		'swf'      :'/themes/light/user/js/uploadify.swf',
+		'uploader' : '/images/uploadPic?flag=baseImg',
+		'buttonText':'',
+		'method':'post',
+		'auto'	   : true,
+		'onUploadSuccess' : function(file, data, response) {
+			//alert('文件 ' + file.name + ' 上传成功.详细信息： '  + data);
+			var obj = jQuery.parseJSON(data);
+			if(obj.error){
+				if(obj.error = 'File is too large'){
+					message('文件不能超过10M，请处理后再上传！');
+				}else{
+					message('文件类型不合法,只能是jpg、gif、bmp、png、jpeg类型！');
+				}
+				return false;
+			}
+			var fileNames = obj.filename_url;
+			if(fileNames.length > 1 && fileNames ) {		
+				var ldot = fileNames.lastIndexOf(".");
+				var type = fileNames.substring(ldot + 1);
+				if(type == 'docx' || type == 'txt' || type == 'doc') {
+					message('文件类型不合法,只能是jpg、gif、bmp、png、jpeg类型！');
+				}else{
+					$('#me2-pop').attr('style','');
+	    			$("#class").attr("class", "pop absolute");
+					$("#pop-con").removeClass("hide");
+					$("#pop-bg").removeClass("hide");
+					$('#target').remove();
+					var add = "<img id='target' src='"+ obj.filename_url + "'"+ " style='max-width:440px;max-height:440px;' '/></img>";
+	        		$('.show').html(add);
+	        		$('#filename').attr('value', $('#target').attr('src'));
+	        		upCover('pd_cover');
+				}		
+			}
+		},
+	});
+	
+	$('#pd_upload object').css({'height':'35px','bottom':'20px','margin-top':'170px','width':'90px','left':'-6px'});
+
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	var files,uploadmax = 50,uploadqueue = [],log = document.getElementById("log"),album,publish = false;
+
+	//$(".list-add").on('click', function(event) {
+		/*if(! $(".radio-blue li").hasClass('selected')){
+    		message('请选择片单类型！');
+    		return false;
+    	};*/
+		var isvr = $('.selected').find('input').val();
+		clouds.uploadsdk.SetConfig({
+			"deltokenurl":"http://www.fengmi.tv/upload/deletetoken/isvr/"+isvr,
+			"tokenurl":"http://www.fengmi.tv/upload/token/isvr/"+isvr,
+			"filetype":1,
+			"servicetype":1, 
+			"filekey":"13560192011204420520170417",
+			"delcallbackurl":"http://www.fengmi.tv/upload/Dresult?isvr="+isvr,
+			"uploadcallbackurl":"http://www.fengmi.tv/upload/Uresult?token=135601920112044205&isvr="+isvr,
+		});
+		clouds.uploadsdk.decorate('upload');
+		clouds.uploadsdk.addEventListener("filelist", function(event) {
+			var loadfile, output = [];
+			files = event.data;
+			console.log(files)
+			upfile(files);					
+			$(".file-pop").removeClass('current');
+			$(".gray").hide();
+			$(".big-somany").hide();
+			$(".file-pop").css('z-index', '-1');	
+			startUpload();	
+			window.onbeforeunload = function() {
+			    return "您之前的操作尚未完成，请勿关闭此页面";
+			}
+		});
+		//$('#cloudsupload').trigger('click');
+		
+     //});
+	
+	
+	function upfile(files) 
+	{	
+		for (var i = 0; i < files.length; i++) {
+			loadfile = files[i];
+			$('.admin-list').append(generateHtml(loadfile));				    
+			
+			loadfile.addEventListener("error", function(event) {
+				document.getElementById("result" + event.target.fileid).innerHTML = errorMessage(event.code);
+				$("#upload" + event.target.fileid).attr('code', event.code);
+				if(publish && event.code != 200) $("#publish_notice").html('').html('存在上传失败视频，请重新上传后提交');
+				//console.log("异常码->", event.code);
+				//queuetask();
+			});
+			loadfile.addEventListener("progress", function(event) {
+	 			var ratio = event.data.bytesLoaded/event.data.bytesTotal;
+	 			var speedstr = String(event.data.speed);
+	 			if(speedstr.indexOf("M/S") > -1){
+	 				var speed = (event.data.speed.replace("M/S","") * 1024);
+	 			}else{
+	 				var speed = parseFloat(event.data.speed/(1024)).toFixed(2);
+	 			}
+		 		document.getElementById("speed"+event.target.fileid).innerHTML = speed + 'Kb/s';
+				document.getElementById("ratio"+event.target.fileid).innerHTML = "\t"+ parseInt(ratio*100).toString() + '%';
+				document.getElementById("barup"+event.target.fileid).style.width = parseInt(ratio*100)+ '%';
+				//console.log("文件上传进度->", event.data);
+			});
+			loadfile.addEventListener("uploadcomplete", function(event) {
+				document.getElementById("result"+event.target.fileid).innerHTML = '';
+ 				document.getElementById("notice"+event.target.fileid).style.display = "none";
+ 				document.getElementById("fill"+event.target.fileid).style.display = "block";
+ 				document.getElementById("barup"+event.target.fileid).style.width = '100%';
+ 				document.getElementById("ratio"+event.target.fileid).innerHTML = '100%';
+ 				document.getElementById("speed"+event.target.fileid).innerHTML = '';
+ 				document.getElementById("url"+event.target.fileid).value = event.data.data.url;
+				//console.log("文件上传成功->", event);
+				//queuetask();			
+				savefile(event);
+			});
+			loadfile.addEventListener("deletecomplete", function(event) {
+				console.log("文件删除成功", event);
+				//queuetask();
+			});	
+			var timestamp = parseInt(new Date().getTime()/1000); 
+			$('#file_upload'+loadfile.fileid).uploadify({
+			'swf'      :'/themes/light/user/js/uploadify.swf?time='+ timestamp,
+			'uploader' : '/images/uploadPic?flag=baseImg',
+			'buttonText':'上传封面',
+			'method':'post',
+			'auto'	   : true,
+			'onUploadSuccess' : function(file, data, response) {
+				//alert('文件 ' + file.name + ' 上传成功.详细信息： '  + data);
+				var obj = jQuery.parseJSON(data);
+				if(obj.error){
+					if(obj.error = 'File is too large'){
+						message('文件不能超过10M，请处理后再上传！');
+					}else{
+						message('文件类型不合法,只能是jpg、gif、bmp、png、jpeg类型！');
+					}
+					return false;
+				}
+				var fileNames = obj.filename_url;
+				var navigatorName = "Microsoft Internet Explorer"; 
+					if(fileNames.length > 1 && fileNames ) {		
+						var ldot = fileNames.lastIndexOf(".");
+						var type = fileNames.substring(ldot + 1);
+							if(type == 'docx' || type == 'txt' || type == 'doc') {
+								alert('文件类型不合法,只能是jpg、gif、bmp、png、jpeg类型！');
+							}else{
+								$('#me2-pop').attr('style','');
+			        			$("#class").attr("class", "pop absolute");
+			  					$("#pop-con").removeClass("hide");
+			  					$("#pop-bg").removeClass("hide");								
+			  					$('#target').remove();
+								var add = "<img id='target' src='"+ obj.filename_url + "'"+ " style='max-width:440px;max-height:440px;' '/></img>";
+			            		$('.show').html(add);
+			            		$('#filename').attr('value', $('#target').attr('src'));
+			            		upCover('images'+ $('#'+ $(this)[0].movieName).parents('.upload').attr('fileid'));
+							}		
+						}
+    				},
+			});
+			$('#file_upload'+loadfile.fileid+' object').css({'height':'35px','margin-left':'-60px','width':'90px'});		
+		}	
+	}
+	
+
+	function generateHtml(loadfile) {
+		album = '<div class="upload clearfix" id="upload'+ loadfile.fileid +'" fileid="'+ loadfile.fileid +'" tid="0" code="0">';
+        album += '<div class="video-left">';
+        album += '<div class="poster-img">';
+        album += '<img id="images'+ loadfile.fileid +'" src="/themes/light/video/images/col-img.png">';
+        album += '</div>';
+        album += '<div class="mposter"><div class="change-photo">';
+        album += '<form>';
+		album += '<div id="queue"></div>';
+		album += '<input id="file_upload'+loadfile.fileid+'" name="diy_orgimg" type="file" multiple="true" class="upload-file" name="upload-file" />';
+		album += '</form>';
+		album += '</div> ';
+        album += '</div>';
+        album += '<div class="on-upload">';
+        album += '<h4>说明：</h4>';
+        album += '<p>上传视频解码成功后，系统会默认截取视频截图作为封面,也可点击此处上传封面</p>';
+        album += '</div>';
+        album += '</div>';
+        album += '<div class="video-right">';
+        album += '<div class="video-infor">';
+        album += '<h2>正在上传:<span>'+ loadfile.videoname +'</span></h2>';
+        album += '<input type="hidden"  name="filename" value="'+ loadfile.videoname +'">';
+        album += '<input type="hidden"  name="url" value="" id="url'+loadfile.fileid +'">';
+        album += '<div class="infor-details clearfix">';
+        var size = parseFloat(loadfile.videosize/(1024*1024)).toFixed(2);
+        album += '<span class="details-l">文件大小:'+ size +'M   <em id="speed'+loadfile.fileid +'">上传速度:0Kb/s</em></span>';
+        album += '<span class="details-r">已完成:<em id="ratio'+loadfile.fileid+'">0%</em></span>';
+        album += '<span class="details-rd" ><em id="result'+loadfile.fileid +'">上传中</em></span>';
+        //album += '<span class="details-replay">重传</span>';
+        album += '</div>';
+        album += '<div class="progress-bar">';
+        album += '<div class="barup" id="barup'+loadfile.fileid +'"></div>';
+        album += '<span class="video-stop" onclick="stopUpload(\'upload'+ loadfile.fileid +'\')"></span>';
+        album += '</div>';                            
+        album += '<p class="upload-tips" id="notice'+loadfile.fileid +'">在视频上传过程中，请不要关闭此页面</p>';
+        album += '<div class="height-60" id="fill'+loadfile.fileid +'"></div>';
+        album += '<span class="title-number wordCheck1" id="wordCheck1'+loadfile.fileid +'"></span>';
+       	var pos = loadfile.videoname;
+        var arrpos = pos.split('.');
+        arrpos.pop();
+        var posstring= arrpos.join('.');
+        var reactpos = uploadLimit(posstring,20);
+        var showname = reactpos;
+        album += '<input type="text" class="video-title" name="showname" placeholder="标题" onkeyup="noticeLimit(this,20,\'wordCheck1'+loadfile.fileid +'\')" value="'+ showname +'">';
+        album += '<span class="title-number wordCheck3" id="wordCheck3'+loadfile.fileid +'"></span>';
+        album += '<textarea class="video-dess" placeholder="简介" name="filedesc" onkeyup="noticeLimit(this,140,\'wordCheck3'+loadfile.fileid +'\')" ></textarea>';
+        album += '</div>';
+        album += '</div>';
+        album += '</div>';
+        return album;
+ 	}
+	
+	
+	function queuetask(){
+		var len,load;
+		if(uploadqueue.length){
+			uploadqueue.shift();
+		}
+		len = uploadmax - uploadqueue.length;
+		for (var i = 0; i < len; i++) {
+			if(files.length){
+				load = files.shift();
+				load.upload();
+				uploadqueue.push(load);
+			}
+		};
+	}
+	
+	function startUpload() {
+		$(".radio li").unbind();
+		var loads, output, btn;
+		if (files.length == 0) {
+			return;
+		}
+		loads = files;
+		output = [];
+		queuetask();
+	};
+	
+	function stopUpload(fileid) {		
+		var loads, output, btn;
+		var upload = $('#'+fileid);
+		var fileid = upload.attr('fileid');
+		if(files[fileid])
+		{
+			files[fileid].unload();
+		}
+		upload.remove();	
+		
+		if($('.admin-list > div').length == 0){
+			$(".radio li").on('click', function(event) {
+			    event.preventDefault();
+			    $(this).addClass('selected').siblings().removeClass('selected');
+			});
+    	}
+	};
+
+	function errorMessage(code) {
+		var msg = "";
+		switch (code) {
+			case 111:
+				msg = "取消上传";
+				break;
+			case 112:
+				msg = "上传失败";
+				break;
+			case 113:
+				msg = "上传验证异常";
+				break;
+			case 116:
+				msg = "上传文件格式不支持";
+				break;
+			case 404:
+				msg = "网络连接异常";
+				break;
+			case 415:
+				msg = "上传文件解析失败";
+				break;
+			case 200:
+				msg = "上传完成";
+				break;
+			case 103:
+				msg = "文件已上传";
+				break;
+			case 104:
+				msg = "未购买对应服务";
+				break;
+			case 105:
+				msg = "空间不足";
+				break;
+			default:
+				msg = "上传失败";
+		}
+		return msg;
+	};
+			
+			
+	function savefile(event) {
+		var file = $('#upload'+event.target.fileid);
+ 		var img = file.find('img').attr('src');	
+ 		var filename = file.find('input[name="filename"]').val();
+ 		var showname = file.find('input[name="showname"]').val();
+ 		var filedesc = file.find('textarea[name="filedesc"]').val();
+ 		var isvr = $('.selected').find('input').val();
+ 		videostyle = isvr == 1 ? 2 : 1;
+ 		var url = event.data.data.url;
+ 		var hash = event.data.data.hash;
+ 		
+ 		$.post("/upload/edit", {url:url,hash:hash,showname:showname,filename:filename,filedesc:filedesc,img:img,videostyle:videostyle},
+       	function(data){
+	        var dataObj = eval("("+data+")");
+	        if(dataObj != null){
+	             if(dataObj.status == 400){
+					message('分集'+ showname +'保存失败,请重新上传！');           
+	             }
+	             else{ 
+		             if(publish && is_over()){
+						addpd ();
+					 }
+				 }
+	        }
+     	});
+ 		return false;
+ 	}
+     	
+     
+     
+    $("#publish").on('click', function(event) {
+    	var isvr = $('.selected').find('input').val();
+    	var pd_cover = $('#pd_cover').attr('src');
+    	var pd_name = $('#pd_name').val();
+    	var pd_desc = $('#pd_desc').val();
+    	if(pd_cover.indexOf('col-img.png') != -1){
+    		message('片单封面不能为空！');   		
+    		return false;
+    	};
+    	if(! pd_name){
+    		message('片单标题不能为空！');
+    		$('.leader-title').addClass('required-line');
+    		return false;
+    	}
+    	else{
+    		$('.leader-title').removeClass('required-line');
+    	};
+    	if(! pd_desc){
+    		message('片单简介不能为空！');
+    		$('.leader-dess').addClass('required-field');
+    		return false;
+    	}
+    	else{
+    		$('.leader-dess').removeClass('required-field');
+    	};
+    	if(! $(".radio-blue li").hasClass('selected')){
+    		message('请选择片单类型！');
+    		return false;
+    	};
+    	if($('.admin-list > div').length == 0){
+    		message('请添加分集！');
+    		return false;
+    	}
+    	
+    	//console.log('ddd',isvr);
+    	var data = [];
+    	var file,name,cover,desc;
+		var check = false;
+		$('.admin-list > div').each(function(){
+			name  = $(this).find('input[name="showname"]').val();
+			if(!name){
+				message('分集名字不能为空！');
+				$(this).find('input[name="showname"]').addClass('required-line');
+				check = true;
+				return false;
+			}
+			else{
+				$(this).find('input[name="showname"]').removeClass('required-line');
+			};
+			desc  = $(this).find('textarea[name="filedesc"]').val();
+			if(!desc){
+				message('分集简介不能为空！');
+				$(this).find('textarea[name="filedesc"]').addClass('required-field');
+				check = true;
+				return false;
+			}
+			else{
+				$(this).find('textarea[name="filedesc"]').removeClass('required-field');
+			};  
+		});	
+		if(check){
+			return false;
+		}
+		$(".circle-uping").addClass('current');
+		$(".gray").show();
+
+		publish = true;
+		if(is_over()){
+			addpd ();
+		}
+		else{
+			if(is_error()){
+				$("#publish_notice").html('').html('存在上传失败视频，请重新上传后提交');
+			}else{
+				$("#publish_notice").html('').html('信息已保存，等待视频上传成功后会自动提交');
+			}
+		}	
+
+		
+    }); 
+    
+    
+    $(".back-edit").on('click', function(event) {
+    	publish = false;
+     	$(".circle-uping").removeClass('current');
+	 	$(".gray").hide();
+    }); 
+     
+     
+    function is_over() {
+    	var is_over = true;
+		$('input[name="url"]').each(function(){
+			if(!$(this).val()){
+				is_over = false;
+			}
+		});	
+		return is_over;
+ 	}
+ 	
+ 	function is_error() {
+    	var code, is_error = false;
+		$('.upload').each(function(){
+			code = $(this).attr('code');
+			if(code != 0 && code != 200){
+				is_error = true;
+			}
+		});	
+		return is_error;
+ 	}
+ 	
+ 	function addpd () {
+    	var isvr = $('.selected').find('input').val();
+    	var pd_cover = $('#pd_cover').attr('src');
+    	var pd_name = $('#pd_name').val();
+    	var pd_desc = $('#pd_desc').val();
+    	if(pd_cover.indexOf('col-img.png') != -1 || ! pd_name || ! pd_desc || $('.admin-list > div').length == 0){
+    		return false;
+    	}
+    	var data = [];
+    	var file,name,cover,desc;
+		var check = false;
+		$('.admin-list > div').each(function(){
+			fileid= $(this).attr('fileid');
+			cover = $(this).find('img').attr('src');
+			cover = cover.indexOf('col-img.png') != -1 ? '' : cover;
+			file  = $(this).find('input[name="filename"]').val();
+			name  = $(this).find('input[name="showname"]').val();
+			url   = $(this).find('input[name="url"]').val();
+			desc  = $(this).find('textarea[name="filedesc"]').val();
+			if(!name){
+				check = true;
+			}
+			if(!desc){
+				check = true;
+			}
+			if(!check){
+				data.push({"fileid": fileid ,"file": file ,"name": name, "cover": cover, "desc": desc, "url": url});	
+			}    
+		});	
+		if(check){
+			return false;
+		}
+		data.push({"name": pd_name ,"cover": pd_cover ,"desc": pd_desc ,"isvr": isvr});	
+		$.post("/ucenter/addpd", {json : JSON.stringify(data)},
+		function(obj){
+			var dataObj = eval("("+ obj +")");
+	        if(dataObj != null && dataObj.status == 200){ 
+	        	window.onbeforeunload=null;
+				location.href="/ucenter/mysheet";        
+	        }
+	        else{
+	        	$(".circle-uping").removeClass('current');
+	        	message('创建失败，请稍后重试！');
+	        }	
+ 		});
+    }	
+</script>
